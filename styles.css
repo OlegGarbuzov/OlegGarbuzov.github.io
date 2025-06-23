@@ -774,3 +774,33 @@ html {
         min-height: 40vh;
     }
 }
+
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.6rem;
+    border: 2px solid #7b8cff;
+    border-radius: 30px;
+    background: #fff;
+    color: #7b8cff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 1.2rem auto 0 auto;
+    box-shadow: 0 2px 12px rgba(123,140,255,0.07);
+    transition: all 0.2s cubic-bezier(.4,0,.2,1);
+}
+.btn-github i {
+    font-size: 1.2em;
+}
+.btn-github:hover {
+    background: #7b8cff;
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(123,140,255,0.18);
+    border-color: #7b8cff;
+}
+.hero-content .btn-github {
+    display: flex;
+    justify-content: center;
+}
