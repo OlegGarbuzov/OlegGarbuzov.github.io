@@ -106,6 +106,19 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
+    const skillsTableWrap = document.querySelector('.skills-table-wrap');
+    if (skillsTableWrap) {
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    skillsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25 });
+        skillsObserver.observe(skillsTableWrap);
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
